@@ -29,7 +29,7 @@ quotes = (
 ##############
 @app.route('/')
 def exercise1():
-    return 'Hello World!'
+    return 'Hi, ' + current_user.first_name + ' ' + current_user.last_name + '!'
 
 
 ##############
