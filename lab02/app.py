@@ -29,8 +29,7 @@ quotes = (
 ##############
 @app.route('/')
 def exercise1():
-    return 'Hi, ' + current_user.first_name + ' ' + current_user.last_name + '!'
-
+    return 'Hi, ' + current_user.get_full_name() + '!'
 
 ##############
 # Exercise 2 #
@@ -39,7 +38,8 @@ def exercise1():
 def exercise2():
     return render_template(
         'quote-of-the-day.html',
-        user=current_user
+        user=current_user,
+        quote=random.choice(quotes)
     )
 
 ##############
