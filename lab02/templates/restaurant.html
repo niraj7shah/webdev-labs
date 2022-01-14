@@ -10,13 +10,21 @@
 <body>
     {% include 'includes/header.html' %}
 
-    <main>
+    <!-- <main>
         <p>Search location: {{city}}</p>
         <p>Search term: {{search_term or 'None Specified'}}</p>
         <p>Data: {{ restaurant }}</p>
         <h2>Top Restaurant:</h2> 
         <p>Name: {{ restaurant.get('name') }}</p>
-    </main>
+    </main> -->
+    <section id = "card">
+        <h2 id = "header">{{restaurant.get('name')}}</h2>
+        <img id = "pic" src = {{ restaurant.get('image_url') }} alt = "Image of restaurant" />
+        <p id = "add"> {{restaurant.get('display_address')}}</p>
+        <p class = "attributes"> Price: <b>{{restaurant.get('price')}}</b></p>
+        <p class = "attributes"> Rating: <b>{{restaurant.get('rating')}}</b></p>
+        <p class = "attributes"> Review Count: <b>{{restaurant.get('review_count')}}</b></p>
+    </section>
 </body>
 </html>
 

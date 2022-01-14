@@ -15,6 +15,26 @@ header {
     align-items: center;
 }
 
+#card {
+    border: solid 1px;
+    width: 300px;
+    margin: 20px;
+}
+
+#header {
+    margin:10px;
+}
+
+.attributes{
+    border: dotted 1px;
+    padding: 3px;
+}
+
+#pic { 
+    width: 300px;
+    height: 200px;
+}
+
 nav ul {
     width: 250px;
     list-style-type: none;
